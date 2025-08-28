@@ -24,12 +24,13 @@ import { menuLinks } from "@/site.config";
 			/> -->
 
      <!-- 修改后的LOGO -->
-        <img
-				src="/icon.svg"
-				alt="Logo"
-				class="me-3 h-10 w-10 sm:absolute sm:start-[-5rem] sm:top-[-0.4rem] sm:me-0 sm:h-16 sm:w-16"
-        style="object-fit: contain;"
-			/>
+       <div class="logo-wrap me-3 h-10 w-10 sm:absolute sm:start-[-5rem] sm:top-[-0.4rem] sm:me-0 sm:h-16 sm:w-16">
+  <img src="/icon.svg"
+       alt="Logo"
+       class="h-full w-full"
+       style="object-fit: contain;" />
+</div>
+
       <!-- 原来的LOGO -->
 			<!-- <svg
 				aria-hidden="true"
@@ -136,3 +137,14 @@ import { menuLinks } from "@/site.config";
 
 	customElements.define("mobile-button", MobileNavBtn);
 </script>
+<style>
+.logo-wrap {
+  background-color: white;   /* 亮色模式背景 */
+  border-radius: 4px;        /* 可选：圆角 */
+  padding: 2px;              /* 可选：内边距 */
+}
+
+html.dark .logo-wrap {
+  background-color: black;   /* 暗色模式背景 */
+}
+</style>
